@@ -1,0 +1,37 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.timelineTblContainer{
+    margin-top:50px;
+}
+.timelineTblContainer h3{ 
+    margin-bottom:20px;
+}
+.timelineTblContainer span {
+    color:#000;
+    
+}
+
+.timelineTblContainer span.anchorLink {    
+    cursor:pointer;
+}
+
+.timelineTblContainer span.anchorLink:hover{
+    background: #5299b9;
+}
+
+.submitNotification{
+    width: 100px;color: #fff;height: 30px;
+}
+

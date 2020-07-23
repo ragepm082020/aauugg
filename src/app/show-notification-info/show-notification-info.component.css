@@ -1,0 +1,13 @@
+.mailContainer{
+    border:1px solid #7386D5; margin: 30px;padding:10px;
+  }
+  
+.mailSection div {
+    padding-bottom: 20px;
+}
+
+.mailSection span{
+    text-align:right;
+    float:right;
+    font-weight:bold;
+}

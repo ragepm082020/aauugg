@@ -1,0 +1,35 @@
+<div>
+    <div class="leftChartContainer">        
+          <h4 class="recent_proj_status">Recent Projects Status</h4>
+          <div id="bar-chart-container">
+              <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"                    
+                    [legend]="true"
+                    [chartType]="barChartType"></canvas>
+          </div>
+    </div>
+    <div class="rightChartContainer">
+        <div>
+            <div class="chartProjectAssignedSec">
+              <div class="chartProjectAssignedLbl"><h4> Assigned To</h4></div>
+              <div class="chartChooseProject">
+                <!--[(ngModel)]="assignedUserSelected"-->
+                <select id="issueAssignedStatusVal"  (change)="onChange($event.target.value)">
+                  <option value="t212" selected>Tata-212</option>
+                  <option value="t305">Tata-305</option>         
+                  <option value="t313">Tata-313</option>
+                  <option value="t307">Tata-307</option>
+                </select>
+              </div>
+            </div>
+            <div style="display: block">
+                <canvas baseChart
+                        [data]="doughnutChartData"
+                        [labels]="doughnutChartLabels"
+                        [chartType]="doughnutChartType"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

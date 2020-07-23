@@ -1,0 +1,73 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.leftEmptyContainer{
+    width:75%; min-height: 500px; margin-top:50px;  float: left;
+}
+.projectsList{
+    width:20%; margin-top:50px; padding: 2%; float: left; 
+}
+
+.projectsList p a .btn{ 
+    font-size:0.75rem;
+}
+
+.projectsList ul{
+    padding-inline-start: 10px;
+}
+
+.projectsList ul li {
+    padding:5px;
+    list-style: none;
+}
+
+.mr-2{
+    min-width: 280px;
+    font-size: 12px;  
+      
+}
+.projImg img {
+    float:left; 
+    height:45px; 
+    width:40px;    
+}
+
+.imgProject1{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp1.png?alt=media&token=e85a8d90-82f2-4330-8f58-b8b49d16dd5c') no-repeat 0 0;
+    background-position: 100% 10%;
+    background-size: cover;    
+}
+.imgProject2{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp2.png?alt=media&token=b4621999-9a02-486b-898f-2ba7e20c2a8e') no-repeat 0 0;    
+    background-position: 100% 10%;
+    background-size: cover;
+}
+
+.imgProject3{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp3.jpg?alt=media&token=a9c06cc8-177d-470e-9ad4-8cb385e88ebb') no-repeat 0 0;    
+    background-position: 100% 10%;
+    background-size: cover;
+}
+
+.userProfile{
+    background-position: 34% 50%;
+}
+
+
+#usersInvolvedVal{
+    min-height: 130px;
+}
+#usersInvolvedVal option{
+ height:20px;
+}

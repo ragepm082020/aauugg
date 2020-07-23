@@ -1,0 +1,58 @@
+.loggedUser{
+    float: left;
+   
+}
+
+.loggedLbl{
+    margin-top:15px;
+}
+.logOff{    
+    font-weight:bold;
+    margin-left:20px;
+    line-height:50px;
+    float: left;
+    height: 30px;
+    width: 30px;
+    font-size:0.80rem;
+    cursor:pointer;   
+}
+
+.logOff a, .logOff a:visited, .logOff a:active {
+    cursor:pointer;
+    color: red;
+    text-decoration: none;
+}
+
+#logoutUser{
+    width: 200px;
+    font-size: 14px;
+    font-weight: 600;
+    color: red;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;   
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    padding:5px 10px;
+    border:1px solid #f8f9fa;
+    background: #f8f9fa;
+}
+
+#logoutUser:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #32122f;
+    border-radius: 5px;
+    padding:5px 10px;
+    border:1px solid red;
+    background: red;
+    color:#fff;;
+}

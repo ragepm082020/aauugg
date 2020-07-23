@@ -1,0 +1,118 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.leftChartContainer{
+    width:45%; min-height: 300px; margin-top:50px;  float: left;border:1px solid #cca;
+}
+
+.rightChartContainer{
+    width:45%; min-height: 300px; margin-top:50px; margin-left:30px; float: left;border:1px solid #cca;
+}
+
+#bar-chart-container{
+    display: none;
+}
+
+.projectsList{
+    width:20%; margin-top:50px; padding: 5%; float: left; 
+}
+
+.projectsList p a .btn{ 
+    font-size:0.75rem;
+}
+
+.mr-2{
+    width: 200px;
+}
+
+.projImg{
+    float:left; 
+    height:45px; 
+    width:40px;    
+}
+
+.imgProject1{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp1.png?alt=media&token=e85a8d90-82f2-4330-8f58-b8b49d16dd5c') no-repeat 0 0;
+    background-position: 100% 10%;
+    background-size: cover;    
+}
+
+.imgProject2{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp2.png?alt=media&token=b4621999-9a02-486b-898f-2ba7e20c2a8e') no-repeat 0 0;    
+    background-position: 100% 10%;
+    background-size: cover;
+}
+
+.imgProject3{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp3.jpg?alt=media&token=a9c06cc8-177d-470e-9ad4-8cb385e88ebb') no-repeat 0 0;    
+    background-position: 100% 10%;
+    background-size: cover;
+}
+
+.userProfile{
+    background-position: 34% 50%;
+}
+
+#sidebar.active {
+    margin-left: -100px;
+}
+
+.chartProjectAssignedSLbl{
+    width:50%;float:left;
+}
+
+.chartChooseProject{
+    width:50%;float:left; float:right;
+}
+
+.chartChooseProject select{
+    float: right;
+} 
+
+.loaderDiv{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;      
+}
+
+.loaderDiv img {
+    margin:0;
+    padding:0;
+    padding:18%;
+    padding-top:20%; 
+    padding-left:40%;
+}
+
+.modal-dialog{
+    max-width: 1200px!important;
+    height: 700px;
+}
+
+.chartProjectAssignedLbl{
+    display:inline;
+    width:60%;
+}
+
+.chartChooseProject{
+    display:inline;
+    width:32%; 
+    margin-top:5px; 
+    line-height:40px;
+}
+
+.chartChooseProject select {
+    font-size:14px; 
+    line-height:20px;
+}

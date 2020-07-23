@@ -1,0 +1,114 @@
+<div class="wrapper">    
+  <app-side-nav-menu></app-side-nav-menu>
+  <div id="content">  
+    <app-top-nav-menu></app-top-nav-menu>
+    <div class="profileImgSec border"> 
+      <!--<span *ngFor="let usersList of userInvolved; let j = index"> <a href="/user?userId={{j}}" class="userImg" title="{{usersList.username}}"><img src ="{{usersList.userImg}}" height="30" width="40" /></a> </span>       -->
+    </div>
+
+    <div class="form-group form-inline clearFix">     
+      <form [formGroup]="searchIssueFrm"> 
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      </form> <!--<button class="btn btn-lg btn-outline-primary"><img src="https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2FexportToExcel.png?alt=media&token=3d2a6e1a-88fa-48be-a73b-850f744f274c" width="30" height="25"/>  </button>-->      
+      <span class="addIssue"><button class="btn btn-lg btn-outline-primary" (click)="open(content)">+</button></span>
+    </div>
+    <table class="table table-striped">
+      <thead><tr><th scope="col">Type</th><th scope="col">Priority</th><th scope="col">Subject</th><th scope="col">Status</th><th scope="col">Modified</th><th scope="col">Assigned to</th></tr></thead>
+      <tbody id="myTable">  
+      <tr *ngFor="let projectIssue of projectIssues; let i = index">        
+        <td>
+            <div [ngSwitch]="projectIssues[i].issueType">
+              <span *ngSwitchCase="'Bug'"><span class="bugImg"></span></span>
+              <span *ngSwitchCase="'Question'"><span class="questionImg"></span></span>
+              <span *ngSwitchCase="'Enhacement'"><span class="enhacementImg"></span></span>          
+            </div>
+        </td>
+        <td><a class="viewIssueLink" routerLink="/viewIssue/{{projectIssues[i]._id}}">{{projectIssues[i].issuePriority}}</a></td>
+        <td><a class="viewIssueLink" routerLink="/viewIssue/{{projectIssues[i]._id}}">#{{i+1}} - {{projectIssues[i].issueHeading}}</a></td>
+        <td><a class="viewIssueLink" routerLink="/viewIssue/{{projectIssues[i]._id}}">{{projectIssues[i].issueStatus}}</a></td>
+        <td><a class="viewIssueLink" routerLink="/viewIssue/{{projectIssues[i]._id}}">{{projectIssues[i].issueType}}</a></td>
+        <td><a class="viewIssueLink" routerLink="/viewIssue/{{projectIssues[i]._id}}">{{projectIssues[i].issueAssignedTo}}</a></td>        
+      </tr>
+      </tbody>
+    </table>
+    <ng-template #content let-modal style="width:1200px;border:1px solid red">
+      <div class="modal-header"><h4 class="modal-title" id="modal-basic-title">Add Issue</h4><button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')"><span aria-hidden="true">&times;</span></button></div>
+      <div class="modal-body">
+        <form [formGroup]="addIssueFrm" (ngSubmit)="onSubmit()">
+          <div class="form-group formSecFields">
+            <label for="issueHeading">Title</label>
+            <div class="input-group">
+              <input id="titleVal" type="text" class="form-control" name="issue_Heading" formControlName="issueHeading" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.issueHeading.errors }">
+              <div *ngIf="submitted && f.issueHeading.errors" class="invalid-feedback">
+                  <div *ngIf="f.issueHeading.errors.required">Issue Heading is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group formSecFields">
+            <label for="issueDesc">Description</label>
+            <div class="input-group">
+              <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" name='issue_Desc' formControlName="issueDesc"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.issueDesc.errors }" cols="30" rows="4">
+              </textarea>
+              <div *ngIf="submitted && f.issueDesc.errors" class="invalid-feedback">
+                  <div *ngIf="f.issueDesc.errors.required">Issue Description is required</div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="form-group formSecFields">
+            <label for="fileUpload">File Upload</label>
+            <div class="input-group">
+              <input id="fileupload" type="file" class="form-control"name="fileuploader">
+            </div>
+          </div>-->
+
+          <div class="form-group formSecFields">
+              <label for="fileUpload">Issue Type</label>
+              <div class="input-group">                
+                <select [(ngModel)]='issueTypeSelect' class="form-control" formControlName="issueType">                    
+                    <option value='Bug'>Bug</option>
+                    <option value='Enhacement'>Enhacement</option>
+                    <option value='Question'>Question</option>                    
+                  </select>   
+              </div>
+          </div>
+
+          <div class="form-group formSecFields">
+              <label for="fileUpload">Issue Priority</label>
+              <div class="input-group">
+                  <select [(ngModel)]='issuePrioritySelect' class="form-control" formControlName="issuePriority" (change)="ChangingValue($event)">
+                      <option value='Low'>Low</option>
+                      <option value='Medium'>Medium</option>
+                      <option value='High'>High</option>                    
+                    </select>          
+              </div>
+          </div>
+          <div class="form-group formSecFields">
+             <label for="fileUpload">Assigned to</label>
+             <div class="input-group">
+                <select [(ngModel)]='issueAssignedSelect' class="form-control" formControlName="issueAssigned">
+                    <option value='Unassigned'>Unassigned</option>
+                    <option value='Anatte Frency'>Anatte Frency</option>
+                    <option value='Shankar Arunachalam'>Shankar Arunachalam</option>
+                    <option value='JaiKumar'>JaiKumar</option>  
+                    <option value='Dinesh Mohan Singh'>Dinesh Mohan Singh</option>                         
+                  </select>        
+              </div>
+          </div>
+
+          <div class="form-group formSecFields">
+              <label for="issueDesc">Comments</label>
+              <div class="input-group">
+                <textarea class="form-control rounded-0" name='issue_Cmts' formControlName="issueCmts"  class="form-control" cols="30" rows="3"></textarea>                
+              </div>
+            </div>
+
+          <div class="form-group formSecFields">
+              <button class="btn btn-primary">Submit Issue</button>
+          </div>
+        </form>
+      </div>
+      <!--<div class="modal-footer"><button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button></div>-->
+    </ng-template>
+  </div>
+</div>
+<router-outlet></router-outlet>

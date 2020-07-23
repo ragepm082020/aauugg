@@ -1,0 +1,21 @@
+ <nav id="sidebar" [style.display]="isVisible ? 'block' : 'none'">
+  <div class="sidebar-header">
+    <a routerLink="/projectsList"> <img src="https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Frage-logo.png?alt=media&token=9f8f5b7b-7c1e-4fdd-8bfd-d691fd6090ff"></a>
+  </div>
+  <div style="float:right;min-height:50px;">
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span class="menuIcon"></span>
+      </button>
+  </div>
+  <ul class="list-unstyled components">
+    <!--<li><a href="#">Backlog</a></li>-->
+    <li class="menuDashboard"><a routerLink="/projectsList"><span class="homeImg menubgImg homeImgClr"></span><span class="menuLbl">Dashboard</span></a></li>
+    <!--<li class="menuProjList"><a routerLink="/projectsList"><span class="menubgImg projectsImgClr"></span><span class="menuLbl">Projects</span></a></li>-->
+    <li class="menuUser"><a routerLink="/user"><span class="menubgImg profileImgClr"></span><span class="menuLbl">Profile</span></a></li>
+    <li class="menuTimeline"><a routerLink="/timeline"><span class="menubgImg timelineImgClr"></span><span class="menuLbl">Timeline</span></a></li>
+    <li class="menuNotify"><a routerLink="/notification"><span class="menubgImg notifyImgClr"></span><span class="menuLbl">Notifications</span></a></li>
+     
+  </ul>              
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.profileImgSec{
+    margin-top:150px; width: 24%;padding: 1%; float: right;border:1px solid #ede;
+}
+.projectsList{
+    margin-top:50px; padding: 5%; float: right;
+}
+.userImg{
+    float:left; height:85px; width:90px;background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fuser_profile_collection.jpg?alt=media&token=ca67696c-bdbf-4ce7-af97-fab000ff7c46') no-repeat 0 0;background-position: 100% 10%;
+}
+
+.userProfile{
+    background-position: 34% 50%;
+}
+
+.userProfile1{
+    background-position: 100% 93%;
+}
+.userProfile2{
+    background-position: 100% 10%;
+}
+.userProfile3{
+    background-position: 68% 50%
+}

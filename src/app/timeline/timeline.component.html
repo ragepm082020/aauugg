@@ -1,0 +1,20 @@
+<div class="wrapper">    
+  <app-side-nav-menu></app-side-nav-menu>    
+     <div id="content">
+         <app-top-nav-menu></app-top-nav-menu>
+         <div class="timelineTblContainer">   
+            <h3><span class="headingLbl">Timeline</span></h3>
+            <table class="table">
+              <tr *ngFor="let logVal of myTimelineObject; let i = index">
+                  
+                <td style="width:80%;color:rgba(125, 145, 96, 0.867); float:left; padding : 5px; "><span class="userLbl">{{logVal.userUpdated}}</span> has updated the attribute 
+                "<span class="userSubjLbl">{{logVal.subject}}</span>" from  "<span class="statusMovedFrom">{{logVal.fromactivity}}</span>" to    "<span class="statusMovedTo">{{logVal.toactivity}}</span>" for "{{logVal.activityUpdatedIssue}}"
+                <td style="width:20%;color:rgba(112, 120, 243, 0.867); float:left; padding : 5px;"> {{logVal.activityUpdated | date:'medium' }} </td>
+                </tr>
+          </table>
+
+          </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet> 

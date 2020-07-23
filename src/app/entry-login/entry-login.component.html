@@ -1,0 +1,13 @@
+<div class="main buttons loginBg"> 
+  <p class="sign" align="center">Sign in</p>
+  
+  <div class="alert alert-warning" role="alert" [style.display]="isVisible ? 'block' : 'none'">INVALID LOGIN. Try Again!!!</div>
+  
+  <form class="form1">
+    <input class="username" id="userId" type="text" align="center" value="shankar.a@whatarage.com" placeholder="Username" />
+    <input class="pass" type="password" value="sha12345" align="center" placeholder="Password"/>
+    <button class="logInSubmit btn-hover color-1" id="logSubmit" (click)="storeVal()" align="center" data-href="/dashboard">Sign in</button>
+    <!--<p class="forgotPwd"><a href="#">Forgot Password?</a></p>-->
+  </form>              
+  </div>
+<router-outlet></router-outlet>

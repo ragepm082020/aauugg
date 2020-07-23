@@ -1,0 +1,90 @@
+<div class="wrapper">    
+  <app-side-nav-menu></app-side-nav-menu>    
+     <div id="content">  
+         <app-top-nav-menu></app-top-nav-menu>
+ 
+          <div class="userContainer" *ngFor="let user of Users; let j = index"> 
+            <img src="{{user.userImg}}" width="100" height="100"><br/>  <br/>
+              <p><b>User Name :</b> {{user.userName}} </p>
+              <p><b>Email Id:</b> {{user.userEmail}}</p>
+              <p><b>Department:</b> {{user.userDept}}</p>
+              <p><b>Last logged activity:</b> {{user.userRecentLogged | date:'medium'}} </p><br/>
+              <button class="btn btn-lg btn-outline-primary changePwd" (click)="open(content)">Change Password</button>
+              <br/><br/>    
+          </div>
+
+          <ng-template #content let-modal style="width:1200px;border:1px solid red">
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Change Pasword</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <!--<form  [formGroup]="changePassForm" id="changePassForm" (ngSubmit)="onSubmit()">
+                      <div class="form-group widthFifty">
+                        <label for="oldPassword">Enter old Password</label>
+                        <div class="input-group">
+                          <input formControlName="oldPwd" type="password" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.oldPwd.errors }">
+                          <div *ngIf="submitted && f.oldPwd.errors" class="invalid-feedback">
+                              <div *ngIf="f.oldPwd.errors.required">Old Password is required</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group widthFifty">
+                        <label for="newPassword">Enter new Password</label>
+                        <div class="input-group">
+                          <input formControlName="newPwd" type="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.newPwd.errors }">>
+                          <div *ngIf="submitted && f.newPwd.errors" class="invalid-feedback">
+                              <div *ngIf="f.newPwd.errors.required">New Password is required</div>                              
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group widthFifty">        
+                          <label for="confirmPassword">Confirm Password</label>            
+                        <div class="input-group">
+                          <input id="confirmPwd" formControlName="confirmPwd" type="password" class="form-control" name="confirm_Pwd">
+                        </div>
+                    </div>
+                  <div class="form-group widthFifty">                  
+                    <div class="input-group">
+                      <input id="titleVal" type="submit" class="form-control" name="issueTitle">
+                    </div>
+                  </div>
+                  </form>-->
+                  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                          <label>Old Password</label>
+                          <input type="text" formControlName="oldPwd" (mouseleave) ="mouseLeave('div a')" id="oldPwd" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.oldPwd.errors }" autocomplete="false"/>
+
+                          <div *ngIf="submitted && f.oldPwd.errors" class="invalid-feedback">
+                              <div *ngIf="f.oldPwd.errors.required">Old Password is required</div>
+                          </div>
+                          <div class="invalid-oldPassword" [style.display]="isIncorrectPwdVisible ? 'block' : 'none'">Incorrect Old Password</div>
+                      </div>
+                      <div class="form-group">
+                          <label>New Password</label>
+                          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" autocomplete="false"/>
+                          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                              <div *ngIf="f.password.errors.required">Password is required</div>
+                              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label>Confirm Password</label>
+                          <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" autocomplete="false"/>
+                          <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                              <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                              <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <button class="btn btn-primary">Update Password</button>
+                      </div>
+                    </form>
+              </div>
+              <!--<div class="modal-footer"><button type="button" class="btn btn-outline-dark"  (click)='updatePwd()'>Save</button></div>-->
+            </ng-template>          
+     </div>
+ </div>
+ <router-outlet></router-outlet>

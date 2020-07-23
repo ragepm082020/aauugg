@@ -1,0 +1,252 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 2px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.leftEmptyContainer{
+    width:75%; min-height: 500px; margin-top:50px;  float: left;border:1px solid #cca;
+}
+
+.projectsList{
+    width:20%; margin-top:50px; padding: 5%; float: left; 
+}
+
+.projectsList p a .btn{ 
+    font-size:0.75rem;
+}
+
+.mr-2{
+    width: 200px;
+}
+.projImg{
+    float:left; 
+    height:45px; 
+    width:40px;    
+}
+
+.imgProject1{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp1.png?alt=media&token=e85a8d90-82f2-4330-8f58-b8b49d16dd5c') no-repeat 0 0;
+    background-position: 100% 10%;
+    background-size: cover;    
+}
+.imgProject2{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp2.png?alt=media&token=b4621999-9a02-486b-898f-2ba7e20c2a8e') no-repeat 0 0;    
+    background-position: 100% 10%;
+    background-size: cover;
+}
+.imgProject3{    
+    background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fp3.jpg?alt=media&token=a9c06cc8-177d-470e-9ad4-8cb385e88ebb') no-repeat 0 0;    
+    background-position: 100% 10%;
+    background-size: cover;
+}
+
+.userProfile{
+    background-position: 34% 50%;
+}
+
+#sidebar.active {
+    margin-left: -100px;
+}
+
+.issueDetailSection{
+    min-height:650px;width:80%; float:left;
+}
+
+.issueStatusSection{
+    min-height:650px;width:20%; float:left;background:rgb(248, 248, 248);
+}
+
+.issueTopHeading{
+    padding: 10px;
+}
+
+.issueCreationDetail{
+    text-align: right;
+    padding-right:10px;
+    width:100%;
+}
+
+.issueDesc{
+    margin-bottom:30px;
+    padding: 10px 35px;;
+    min-height:200px;    
+    font-size:1.05rem;    
+}
+
+.hrLine{
+    height:3px;
+    width:100%;
+    clear:both;
+    background: #7386D5;
+}
+
+.hrLineLarge{
+    height:40px;
+    width:100%;
+    background: #7386D5;
+}
+
+.createdContent{
+    float:left;
+    width:95%;
+    padding-left:50%;
+    
+}
+
+.createdUser{
+    float:left;
+    width:4%;    
+}
+
+.hrLineLarge .btn-group-lg>.btn, .btn-lg {
+    padding: .001rem 0.51rem;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.screenshotsSec{
+    padding:20px;
+}
+
+.commentsSec, .issueActivitySec{
+    font-weight: bold;
+    line-height: 40px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.commentDetail, .commentActivity{
+    line-height: 40px;
+    padding: 15px 1px;    
+}
+
+.commentDetail span.commentedUser{
+    float:left; padding-left:10px;width:80%; background:rgb(188, 198, 236);font-weight:bold;;
+}
+
+.commentDetail span.commentedDate{
+    float:left; width:20%; background:rgb(188, 198, 236);
+}
+
+.commentedDesc{
+    padding-left: 20px;
+}
+
+.commentActivity{
+    display: none;
+}
+
+.issueStatus{
+    padding:10px;
+    padding-left:20px;    
+}
+
+.input-group-text, .custom-select{
+    font-size: 0.71rem;
+}
+
+.custom-select{
+    padding:0.375rem 0.75rem .375rem .75rem;
+}
+
+.indicator{
+    border-radius: 9px;
+    height:10px;
+    width:10px;    
+    margin:10px;
+}
+
+.bugCategorySec{
+    padding-left: 5px;
+    padding-top:10px;
+}
+
+.bugType{
+    padding-left:0px;
+    padding-right:50px;     
+    width:50%;   
+}
+
+.bugCategory{
+    padding-left:30px;
+    padding-right:2px;           
+    float:right;
+}
+
+.highPriority{
+    background: red;
+}
+.lowPriority{
+    background: rgb(241, 160, 8);
+}
+.mediumPriority{
+    background: rgb(9, 88, 20);
+}
+
+.hrLineSmall{
+    margin-top:20px;
+    height: 1px;
+    width: 100%;
+    clear: both;
+    background: #7386D5;
+}
+
+.assignedHeading{
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.currentAssignedUser{
+    margin: 10px 0px;
+}
+
+.currentAssignedUser, .assignedUsername{
+    display: inline-block;
+    padding: 5px;
+}
+
+.addAssign{
+    border-radius: 10px;
+    width:100px;
+    height:30px;
+    background:#7386D5;
+    text-align:center;
+    line-height:30px;
+    color:#fff;
+    font-weight: bold;
+    margin: 0% 30%;
+    cursor:pointer;
+}
+
+#commentsSecId{
+    color:#fff;
+}
+
+.activitySection{
+    border-bottom:1px solid #cccddd; 
+    padding: 10px 5px;
+}
+
+#issueStatusVal{
+    font-size:12px;
+}
+#processingLoader{
+    float:left;margin-top:4px;margin-left:5px; display:none;
+}
+.noImgsFound{
+    padding: 5% 43%;
+    color:red;   
+    background:rgb(240, 231, 231);
+    width:100%;
+}

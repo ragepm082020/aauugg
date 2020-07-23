@@ -1,0 +1,16 @@
+<div>
+  <div style="width:100%;background:rgb(240, 164, 77); height:5px;"></div>
+  <div class="mailContainer">
+    
+        <div *ngFor="let mailArr of mailContent" class="mailSection">
+            <div><b>From</b>:  {{mailArr.fromGroup}} <span>{{mailArr.draftedDate | date : 'medium'}}</span></div>
+            <div><b>Subject</b>:  {{mailArr.mailSubject}}</div>
+            <div>Hi Team,</div>  
+            <div>{{mailArr.mainContent}}</div>
+        </div>          
+        
+    <!--{{this.fromGroup}}<br/><br/>
+    {{this.subject}}<br/><br/>     {{this.draftedDate}}
+    {{this.mailContent}}-->
+  </div>
+</div>

@@ -1,0 +1,81 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.timelineTblContainer{
+    margin-top:50px;
+    font-size:14px;
+}
+.timelineTblContainer h3{ 
+    margin-bottom:20px;
+}
+/*
+.timelineTblContainer .headingLbl{
+    width: 100px;
+  height: 100px;
+  border-bottom:1px solid #7386D5;
+  transition-property: width;
+  transition-duration: 2s;
+}
+
+.timelineTblContainer .headingLbl:hover{
+    width: 300px;        
+}*/
+
+
+.timelineTblContainer .headingLbl {
+    width: 500px;
+    height: 40px;
+    padding: 2px 50px;
+    color:#fff;
+    position: relative;
+    background: rgb(169, 181, 228);
+  }
+  .timelineTblContainer .headingLbl:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .timelineTblContainer .headingLbl:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid rgb(169, 181, 228);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+  .userLbl{
+    color:#000;
+  }
+
+  .userSubjLbl{
+    color:rgb(104, 51, 51);
+  }
+
+  .statusMovedFrom{
+    color:rgb(120, 96, 187);
+  }
+
+  .statusMovedTo{
+    color:rgb(93, 169, 231);
+  }

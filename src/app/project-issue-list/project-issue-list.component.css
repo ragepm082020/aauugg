@@ -1,0 +1,247 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}    
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-top:1px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.form-inline{
+    padding-top:40px;
+}
+
+.formSecFields{    
+    padding: 10px;
+}
+
+.optionVal{
+    border:none;
+    width:100%;
+}
+
+.profileImgSec{
+    margin-top:5px; 
+    width: 100%;
+    padding: 1%; 
+    float: right;
+    border:1px solid #dadada;
+}
+
+.profileImgSec a{
+    float:right;
+} 
+
+.projectsList{
+    margin-top:5px; padding: 5%; float: right;
+}
+
+.userImg{
+    float:left; width:40px;/*background:url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fuser_profile_collection_small.jpg?alt=media&token=6c6ab842-9629-44e5-9a02-efdfb3264fd9') no-repeat 0 0;background-position: 100% 10%;*/
+    cursor: pointer;
+}
+
+.clearFix{
+    clear:both;
+}
+
+.userProfile{
+    background-position: 35% 8%;
+}
+
+.userProfile1{
+    background-position: 35% 52%;
+}
+
+.userProfile2{
+    background-position: 66% 50%;
+}
+
+.userProfile3{
+    background-position: 0% 52%
+}
+
+.userProfile4{
+    background-position: 103% 9%;
+}
+
+.addIssue{
+    float:right; margin-left:70%;
+}
+
+.addIssue button{ 
+    padding: .015rem 0.71rem
+}
+
+.bugImg{
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+    float: left;
+    border-radius: 5px;
+    background:rgb(12, 145, 233);
+}
+
+.questionImg{
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+    float: left;
+    border-radius: 5px;
+    background:rgb(172, 130, 197);
+}
+
+.enhacementImg{
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+    float: left;
+    border-radius: 5px;
+    background:rgb(224, 122, 26);
+}
+
+.filter-wrapper,.keyword-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-wrapper {
+  min-height: 100%;
+  flex-flow: column wrap;;
+  position: relative
+}
+
+.keyword-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+#keyword {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font: 1.5em 'Arimo', sans-serif;
+  width: 50%;
+  outline: none;
+  transition: border 0.5s ease-in-out
+}
+
+#keyword:focus {
+  border-color : rgba(81, 203, 238, 1);;
+}
+
+#keyword-button {
+  position: absolute;
+  right: 26%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.7em;
+  color: #8DB9ED
+}
+
+#keyword-button:hover {
+  color: #ccc
+}
+
+.filter-select {
+  width: 50%;
+  list-style: none;
+  font-size: 1.1em;
+  color: rgb(105, 105, 105);
+  border: 1px solid #ccc;
+  border-top: none;  /*so things don't jump around*/
+  position: absolute;
+  left: 25%;
+  top: calc(50% + 25px);
+  max-height: calc(50% - 15px);
+  overflow-y: auto;
+  background: #fff
+}
+
+.filter-select-list img {
+  margin-right: 30px;
+}
+
+.tags {
+  font-size: 12px;
+  font-style: italic;
+  color: #c6c6c6;
+  margin-right: 10px;
+  position: relative;
+  top: -10px;
+}
+
+.filter-select-list:hover .tags {
+  color: #fff;
+}
+
+.filter-select-list {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.artist-name {
+  display: inline-block;
+  position: absolute;
+}
+
+.filter-select-list:hover {
+  background:  #C0C0C0;
+  color: #fff
+}
+
+.list-highlight,.list-highlight:hover {
+  background: rgb(55, 55, 55);
+  color: #fff
+}
+
+@media only screen and (max-width: 768px) {
+  .filter-select,  #keyword {
+    width: 80%;
+  }
+  
+  #keyword {
+    font-size: 1.3em
+  }
+  
+  .filter-select {
+    font-size: 0.9em;
+    left: 10%;
+    top: calc(50% + 23px);
+  }
+  
+  #keyword-button {
+    right: 11%
+  }
+}
+@media only screen and (max-width: 480px) {
+  .filter-select, #keyword {
+    width: 95%;
+  }
+  
+  .filter-select{
+    left: 2.5%;
+  }
+  
+  #keyword-button{
+    right: 3.5%
+  }
+}
+
+.form-control{
+  margin-left: 1px;
+  font-size:0.71rem;
+}
+
+a.viewIssueLink, a.viewIssueLink:hover {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+#myInput{
+  width:290px;
+}

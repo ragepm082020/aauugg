@@ -1,0 +1,41 @@
+<div class="wrapper">    
+    <app-side-nav-menu></app-side-nav-menu>    
+       <div id="content">
+           <app-top-nav-menu></app-top-nav-menu>
+           <!--<button class="btn btn-lg btn-outline-primary" (click)="open(content)"></button>-->
+            <div class="timelineTblContainer">   
+                <h3>Notifications</h3>  
+                <div style="float:right; width:200px;" class="btn btn-block btn-primary mb-4" (click)="openNotifications(content)"> Add New Notifcation</div>
+                <table class="table table-striped">
+                  <tr>
+                    <th scope="col">From</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Received on</th>                  
+                  </tr>
+                  <tr *ngFor="let mailObj of notificationsObj; let i = index;">                      
+                    <td style="border-top:none;"><span>#{{i+1}} - {{mailObj.fromGroup}}</span></td>
+                    <td style="border-top:none;"><span class="anchorLink" id="OpenContentDiv##{{i+1}}" (click)="open(content,  $event, 'openNotify')">{{mailObj.subject}}</span></td>
+                    <td style="border-top:none;"><span>{{mailObj.draftedDate}}</span></td>
+                  </tr>
+            </table>  
+          </div>
+    </div>
+
+    <ng-template #content let-modal style="width:1200px;">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Notifications</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">   
+          <form name="adNotify" (ngSubmit)="onSubmitNotify($event)">
+            <input id="notifyVal" type="text" class="form-control" name="notifySubject" class="form-control" value="" ><br/>
+            <textarea rows= "5" cols ="60" id="notifyMessage"> </textarea><br/>
+            <input type="submit" class="btn btn-secondary" id="submitNotification">
+          </form>
+        </div>
+      </ng-template>
+  </div>
+  
+  <router-outlet></router-outlet> 

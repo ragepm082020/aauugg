@@ -1,0 +1,240 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+  body {
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+  }
+  
+  p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1em;
+      font-weight: 300;
+      line-height: 1.7em;
+      color: #999;
+  }
+  
+  a,  a:hover,  a:focus {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s;
+  }
+  
+  .navbar {
+      padding: 15px 10px;
+      background: #fff;
+      border: none;
+      border-radius: 0;
+      margin-bottom: 40px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-btn {
+      box-shadow: none;
+      outline: none !important;
+      border: none;
+  }
+  
+  .line {
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px dashed #ddd;
+      margin: 40px 0;
+  }
+  
+  /* ---------------------------------------------------
+      SIDEBAR STYLE
+  ----------------------------------------------------- */
+  
+  .wrapper {
+      display: flex;
+      width: 100%;
+      align-items: stretch;
+  }
+  
+  #sidebar {
+      min-width: 150px;
+      max-width: 150px;
+      height:100%;
+      background: #7386D5;
+      color: #fff;
+      transition: all 0.3s;
+  }
+  
+  #sidebar.active {
+      margin-left: -100px;
+  }
+  
+  #sidebar .sidebar-header {
+      padding: 20px 10px;
+      background: #6d7fcc;
+  }
+  
+  #sidebar ul.components {
+      padding: 20px 0;
+      /*border-bottom: 1px solid #47748b;*/
+  }
+  
+  #sidebar ul p {
+      color: #fff;
+      padding: 10px;
+  }
+  
+  #sidebar ul li a {
+      padding: 20px 10px;
+      font-size: 1.1em;
+      display: block;
+      height:70px;
+  }
+  
+  #sidebar ul li a:hover {
+      color: #7386D5;
+      background: #fff;
+      /*padding: 14px 10px;
+      padding-bottom: 45px;
+      border:1px solid red;
+      margin-top:10px;*/
+  }
+  
+  #sidebar ul li.active>a, a[aria-expanded="true"] {
+      color: #fff;
+      background: #6d7fcc;
+  }
+
+  
+  a[data-toggle="collapse"] {
+      position: relative;
+  }
+  
+  .dropdown-toggle::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+  }
+  
+  ul ul a {
+      font-size: 0.9em !important;
+      padding-left: 30px !important;
+      background: #6d7fcc;
+  }
+  
+  ul.CTAs {
+      padding: 20px;
+  }
+  
+  ul.CTAs a {
+      text-align: center;
+      font-size: 0.9em !important;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 5px;
+  }
+  
+  a.download {
+      background: #fff;
+      color: #7386D5;
+  }
+  
+  a.article,
+  a.article:hover {
+      background: #6d7fcc !important;
+      color: #fff !important;
+  }
+  
+  /* ---------------------------------------------------
+      CONTENT STYLE
+  ----------------------------------------------------- */
+  
+  #content {
+      width: 100%;
+      padding: 20px;
+      padding-top:1px;
+      min-height: 100vh;
+      transition: all 0.3s;
+  }
+
+  .list-unstyled{
+      margin-top:40px;
+  }
+  
+  /* ---------------------------------------------------
+      MEDIAQUERIES
+  ----------------------------------------------------- */
+  
+  @media (max-width: 768px) {
+      #sidebar {
+          margin-left: -250px;
+      }
+      #sidebar.active {
+          margin-left: 0;
+      }
+      #sidebarCollapse span {
+          display: none;
+      }
+  }
+
+  .menuIcon{
+    float: left;
+    width:50px;
+    height:50px;
+    display: none;
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2FhamburgerIcon.png?alt=media&token=f6efbacc-ffa4-4dd3-80a8-63ec4de4f17d') no-repeat 0 0;
+    background-size: contain;
+    
+  }
+
+  .btn-info, .btn-info.focus, .btn-info:focus{
+      background: none;
+      border:none;     
+  }
+
+  .btn {
+    padding: .375rem .05rem
+
+  }
+
+  .menubgImg {
+      background-position: 100% 10%;
+      background-size: cover;
+      height:35px;
+      width: 33px;      
+      float: left;
+  }
+  
+  .homeImg{
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fdashboard.png?alt=media&token=c16fbc92-2f9e-4940-bc00-979fd1b316f5') no-repeat 0 0;   
+  }
+
+  .homeImgClr{
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fdashboard_clr.png?alt=media&token=30caa62c-d9fc-4048-bfd6-2019cf9fad1b') no-repeat 0 0;
+  }
+
+  .projectsImgClr{
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fprojects_clr.png?alt=media&token=4ac00b0b-508e-490f-b22a-04039435ff80') no-repeat 0 0;
+  }
+
+  .profileImgClr{
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fuser_profile.png?alt=media&token=53dfedc2-54cd-4a4d-a9ce-b3a4a963c2c6') no-repeat 0 0;
+    
+  }
+
+  .timelineImgClr{
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Ftimeline_clr.png?alt=media&token=bc59fa8e-d507-4b7e-9ae6-783c829bdfbd') no-repeat 0 0;
+  }
+
+  .notifyImgClr{
+    background: url('https://firebasestorage.googleapis.com/v0/b/ddtestt-bd011.appspot.com/o/pmassets%2Fnotifications_clr.png?alt=media&token=f0e6e3fb-72d1-41b8-a787-0a382e7edc22') no-repeat 0 0;
+  }
+
+ .menuLbl{
+    line-height: 30px;
+    padding: 20px 12px;
+ }   
+
+ .btn-info.focus, .btn-info:focus{
+     box-shadow: 0 0;
+ }
+
+ #sidebar ul.components li.active a{     
+    background: #66ccff;
+ }
